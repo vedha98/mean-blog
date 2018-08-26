@@ -41,7 +41,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\r\n\r\n\r\n<app-navbar></app-navbar>\r\n<div class=\"container\" >\r\n<flash-messages></flash-messages>\r\n  <router-outlet></router-outlet>\r\n\r\n</div>\r\n"
+module.exports = "\r\n\r\n\r\n<app-navbar></app-navbar>\r\n<div class=\"container-fluid\" style=\"padding-left:0px;padding-right:0px\" >\r\n<flash-messages></flash-messages>\r\n  <router-outlet></router-outlet>\r\n\r\n</div>\r\n"
 
 /***/ }),
 
@@ -108,12 +108,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var angular2_flash_messages__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(angular2_flash_messages__WEBPACK_IMPORTED_MODULE_13__);
 /* harmony import */ var _services_auth_service__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./services/auth.service */ "./src/app/services/auth.service.ts");
 /* harmony import */ var _guards_auth_guard__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./guards/auth.guard */ "./src/app/guards/auth.guard.ts");
+/* harmony import */ var ngx_quill__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ngx-quill */ "./node_modules/ngx-quill/index.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -157,7 +159,8 @@ var AppModule = /** @class */ (function () {
                 _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"],
                 _angular_http__WEBPACK_IMPORTED_MODULE_4__["HttpModule"],
                 _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"].forRoot(appRoutes),
-                angular2_flash_messages__WEBPACK_IMPORTED_MODULE_13__["FlashMessagesModule"].forRoot()
+                angular2_flash_messages__WEBPACK_IMPORTED_MODULE_13__["FlashMessagesModule"].forRoot(),
+                ngx_quill__WEBPACK_IMPORTED_MODULE_16__["QuillModule"]
             ],
             providers: [_services_validate_service__WEBPACK_IMPORTED_MODULE_12__["ValidateService"], _services_auth_service__WEBPACK_IMPORTED_MODULE_14__["AuthService"], _guards_auth_guard__WEBPACK_IMPORTED_MODULE_15__["AuthGuard"]],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]]
@@ -188,7 +191,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container-fluid\">\r\n<a class=\"btn btn-primary btn-lg\"  role=\"button\" >create new +</a>\r\n</div>\r\n"
+module.exports = "<div class=\"container\" *ngIf=\"new\" style=\"z-index:4;position:fixed;\">\r\n\r\n\t<div class=\"row justify-content-center\">\r\n\t\t<div class=\"col-12 col-md-8 col-lg-6 pb-5\">\r\n\r\n\r\n                    <!--Form with header-->\r\n\r\n                    <form action=\"mail.php\" method=\"post\">\r\n                        <div class=\"card border-primary rounded-0\">\r\n                            <div class=\"card-header p-0\">\r\n                                <div class=\"bg-info text-white text-center py-2\">\r\n                                    <h3><i class=\"fa fa-envelope\"></i> New Post</h3>\r\n\r\n                                </div>\r\n                            </div>\r\n                            <div class=\"card-body p-3\">\r\n\r\n                                <!--Body-->\r\n\r\n\r\n\r\n                                <quill-editor>\r\n<div quill-editor-toolbar>\r\n<span class=\"ql-formats\">\r\n<button class=\"ql-bold\" [title]=\"'Bold'\"></button>\r\n</span>\r\n\r\n<span class=\"ql-formats\">\r\n<select class=\"ql-align\" [title]=\"'Aligment'\">\r\n  <option selected></option>\r\n  <option value=\"center\"></option>\r\n  <option value=\"right\"></option>\r\n  <option value=\"justify\"></option>\r\n</select>\r\n<select class=\"ql-align\" [title]=\"'Aligment2'\">\r\n  <option selected></option>\r\n  <option value=\"center\"></option>\r\n  <option value=\"right\"></option>\r\n  <option value=\"justify\"></option>\r\n</select>\r\n</span>\r\n</div>\r\n\r\n\r\n\r\n</quill-editor>\r\n\r\n                                <div class=\"text-center\">\r\n                                    <input type=\"submit\" value=\"Post\" class=\"btn btn-info btn-block rounded-0 py-2\" (click)=\"new = false\">\r\n                                </div>\r\n                            </div>\r\n\r\n                        </div>\r\n                    </form>\r\n                    <!--Form with header-->\r\n\r\n\r\n                </div>\r\n\t</div>\r\n</div>\r\n<div *ngIf=\"new\" class=\"container-fluid\" style=\"width:100%;height:100%;background:#0000008c;z-index:2;position:fixed;\"></div>\r\n<div class=\"container-fluid\">\r\n<a class=\"btn btn-primary btn-lg\"  role=\"button\" (click)=\"new = true\">create new +</a>\r\n</div>\r\n"
 
 /***/ }),
 
