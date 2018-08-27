@@ -22,6 +22,7 @@ const appRoutes: Routes = [
 {path:'dashboard',component:DashboardComponent, canActivate:[AuthGuard]},
 {path:'login',component:LoginComponent},
 {path:'validate',component:LoginComponent},
+{path:'allposts',component:AllpostsComponent},
 {path:'profile',component:ProfileComponent, canActivate:[AuthGuard]}
 ]
 

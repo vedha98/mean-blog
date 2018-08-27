@@ -109,6 +109,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_auth_service__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./services/auth.service */ "./src/app/services/auth.service.ts");
 /* harmony import */ var _guards_auth_guard__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./guards/auth.guard */ "./src/app/guards/auth.guard.ts");
 /* harmony import */ var ngx_quill__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ngx-quill */ "./node_modules/ngx-quill/index.js");
+/* harmony import */ var _components_allposts_allposts_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/allposts/allposts.component */ "./src/app/components/allposts/allposts.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -132,12 +133,14 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
 var appRoutes = [
     { path: '', component: _components_home_home_component__WEBPACK_IMPORTED_MODULE_10__["HomeComponent"] },
     { path: 'register', component: _components_register_register_component__WEBPACK_IMPORTED_MODULE_7__["RegisterComponent"] },
     { path: 'dashboard', component: _components_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_9__["DashboardComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_15__["AuthGuard"]] },
     { path: 'login', component: _components_login_login_component__WEBPACK_IMPORTED_MODULE_8__["LoginComponent"] },
     { path: 'validate', component: _components_login_login_component__WEBPACK_IMPORTED_MODULE_8__["LoginComponent"] },
+    { path: 'allposts', component: _components_allposts_allposts_component__WEBPACK_IMPORTED_MODULE_17__["AllpostsComponent"] },
     { path: 'profile', component: _components_profile_profile_component__WEBPACK_IMPORTED_MODULE_11__["ProfileComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_15__["AuthGuard"]] }
 ];
 var AppModule = /** @class */ (function () {
@@ -153,6 +156,7 @@ var AppModule = /** @class */ (function () {
                 _components_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_9__["DashboardComponent"],
                 _components_home_home_component__WEBPACK_IMPORTED_MODULE_10__["HomeComponent"],
                 _components_profile_profile_component__WEBPACK_IMPORTED_MODULE_11__["ProfileComponent"],
+                _components_allposts_allposts_component__WEBPACK_IMPORTED_MODULE_17__["AllpostsComponent"],
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -167,6 +171,69 @@ var AppModule = /** @class */ (function () {
         })
     ], AppModule);
     return AppModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/allposts/allposts.component.css":
+/*!************************************************************!*\
+  !*** ./src/app/components/allposts/allposts.component.css ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/components/allposts/allposts.component.html":
+/*!*************************************************************!*\
+  !*** ./src/app/components/allposts/allposts.component.html ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  allposts works!\n</p>\n"
+
+/***/ }),
+
+/***/ "./src/app/components/allposts/allposts.component.ts":
+/*!***********************************************************!*\
+  !*** ./src/app/components/allposts/allposts.component.ts ***!
+  \***********************************************************/
+/*! exports provided: AllpostsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AllpostsComponent", function() { return AllpostsComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var AllpostsComponent = /** @class */ (function () {
+    function AllpostsComponent() {
+    }
+    AllpostsComponent.prototype.ngOnInit = function () {
+    };
+    AllpostsComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-allposts',
+            template: __webpack_require__(/*! ./allposts.component.html */ "./src/app/components/allposts/allposts.component.html"),
+            styles: [__webpack_require__(/*! ./allposts.component.css */ "./src/app/components/allposts/allposts.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], AllpostsComponent);
+    return AllpostsComponent;
 }());
 
 
@@ -412,7 +479,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-expand-md navbar-dark bg-dark \">\r\n   <a class=\"navbar-brand\" href=\"#\">My Blog App</a>\r\n  <div class=\"container\" >\r\n    <ul class=\"navbar-nav  navbar-right\">\r\n  <li class=\"nav-item\" [routerLinkActive]=\"['active']\">\r\n    <a class=\"nav-link\"  [routerLink]=\"['/']\">Home</a>\r\n  </li>\r\n</ul>\r\n</div>\r\n     <div class=\"container-fluid\" >\r\n       <ul class=\"navbar-nav  navbar-right\">\r\n         <li class=\"nav-item\" [routerLinkActive]=\"['active']\" *ngIf=\"!authService.loggedIn()\">\r\n           <a class=\"nav-link\"  [routerLink]=\"['/login']\">Login</a>\r\n         </li>\r\n         <li class=\"nav-item\" [routerLinkActive]=\"['active']\" *ngIf=\"!authService.loggedIn()\">\r\n           <a class=\"nav-link\"  [routerLink]=\"['/register']\">Register</a>\r\n         </li>\r\n         <li class=\"nav-item\" [routerLinkActive]=\"['active']\" *ngIf=\"authService.loggedIn()\">\r\n           <a class=\"nav-link\" (click) = \"onLogoutClick()\" href=\"#\">logout</a>\r\n         </li>\r\n         <li class=\"nav-item\" [routerLinkActive]=\"['active']\" *ngIf=\"authService.loggedIn()\">\r\n           <a class=\"nav-link\" [routerLink]=\"['/profile']\" href=\"#\">Profile</a>\r\n         </li>\r\n         <li class=\"nav-item\" [routerLinkActive]=\"['active']\" *ngIf=\"authService.loggedIn()\">\r\n           <a class=\"nav-link\" [routerLink]=\"['/dashboard']\" href=\"#\">Dashboard</a>\r\n         </li>\r\n       </ul>\r\n\r\n     </div>\r\n   </nav>\r\n"
+module.exports = "<nav class=\"navbar navbar-expand-md navbar-dark bg-dark \">\r\n   <a class=\"navbar-brand\" href=\"#\">My Blog App</a>\r\n  <div class=\"container\" >\r\n    <ul class=\"navbar-nav  navbar-right\">\r\n  <li class=\"nav-item\" [routerLinkActive]=\"['active']\">\r\n    <a class=\"nav-link\"  [routerLink]=\"['/']\">Home</a>\r\n  </li>\r\n  <li class=\"nav-item\" [routerLinkActive]=\"['active']\">\r\n    <a class=\"nav-link\" [routerLink]=\"['/allposts']\" href=\"#\">Explore</a>\r\n  </li>\r\n</ul>\r\n</div>\r\n     <div class=\"container-fluid\" >\r\n       <ul class=\"navbar-nav  navbar-right\">\r\n         <li class=\"nav-item\" [routerLinkActive]=\"['active']\" *ngIf=\"!authService.loggedIn()\">\r\n           <a class=\"nav-link\"  [routerLink]=\"['/login']\">Login</a>\r\n         </li>\r\n         <li class=\"nav-item\" [routerLinkActive]=\"['active']\" *ngIf=\"!authService.loggedIn()\">\r\n           <a class=\"nav-link\"  [routerLink]=\"['/register']\">Register</a>\r\n         </li>\r\n         <li class=\"nav-item\" [routerLinkActive]=\"['active']\" *ngIf=\"authService.loggedIn()\">\r\n           <a class=\"nav-link\" (click) = \"onLogoutClick()\" href=\"#\">logout</a>\r\n         </li>\r\n         <li class=\"nav-item\" [routerLinkActive]=\"['active']\" *ngIf=\"authService.loggedIn()\">\r\n           <a class=\"nav-link\" [routerLink]=\"['/profile']\" href=\"#\">Profile</a>\r\n         </li>\r\n         <li class=\"nav-item\" [routerLinkActive]=\"['active']\" *ngIf=\"authService.loggedIn()\">\r\n           <a class=\"nav-link\" [routerLink]=\"['/dashboard']\" href=\"#\">Dashboard</a>\r\n         </li>\r\n\r\n       </ul>\r\n\r\n     </div>\r\n   </nav>\r\n"
 
 /***/ }),
 

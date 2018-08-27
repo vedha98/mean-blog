@@ -5,6 +5,9 @@
   <li class="nav-item" [routerLinkActive]="['active']">
     <a class="nav-link"  [routerLink]="['/']">Home</a>
   </li>
+  <li class="nav-item" [routerLinkActive]="['active']">
+    <a class="nav-link" [routerLink]="['/allposts']" href="#">Explore</a>
+  </li>
 </ul>
 </div>
      <div class="container-fluid" >
@@ -24,6 +27,7 @@
          <li class="nav-item" [routerLinkActive]="['active']" *ngIf="authService.loggedIn()">
            <a class="nav-link" [routerLink]="['/dashboard']" href="#">Dashboard</a>
          </li>
+
        </ul>
 
      </div>
