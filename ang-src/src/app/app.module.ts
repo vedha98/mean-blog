@@ -14,7 +14,7 @@ import { ValidateService } from './services/validate.service';
 import { FlashMessagesModule } from 'angular2-flash-messages';
 import { AuthService } from './services/auth.service';
 import {AuthGuard} from './guards/auth.guard';
-import { QuillModule } from 'ngx-quill';
+import { CKEditorModule } from 'ngx-ckeditor';
 import { AllpostsComponent } from './components/allposts/allposts.component'
 const appRoutes: Routes = [
 {path:'',component:HomeComponent},
@@ -45,9 +45,10 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     HttpModule,
+    CKEditorModule,
     RouterModule.forRoot(appRoutes),
     FlashMessagesModule.forRoot(),
-    QuillModule
+
   ],
   providers: [ValidateService, AuthService, AuthGuard],
   bootstrap: [AppComponent]
